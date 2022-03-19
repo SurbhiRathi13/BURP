@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+
+// import BsInstagram from "react-icons/fa";
+import Header from "./Components/Header.js"
+import SliderImages from "./Components/SliderImages"
+import CardSlider from "./Components/CardSlider.js"
+import Footer from "./Components/Footer.js"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header/>
+      <SliderImages/>
+      <br/>
+      <hr></hr>
+      <CardSlider/>
+      <Footer/>
     </div>
   );
 }
