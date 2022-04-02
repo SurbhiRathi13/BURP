@@ -1,0 +1,14 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:0px;
+}
+
+.addButton{
+    position:fixed;
+    color:grey;
+    bottom:27%;
+    right:1%;
+    border:0cm;
+    width:40px;
+}

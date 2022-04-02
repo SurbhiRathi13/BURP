@@ -1,18 +1,44 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import App from './App';
+import AddRecipe from './Components/AddRecipe.js'
+import Header from "./Components/Header.js"
+import Footer from "./Components/Footer.js"
+import SignUp from "./Components/SignUp.js"
+import Profile from "./Components/Profile"
+import RecipeInfo from "./Components/RecipeInfo"
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  // Link
+} from "react-router-dom";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <Header/>
+    <Routes>
+      <Route path="/" element={<App />}/>
+        <Route path="/addRecipePage" element={<AddRecipe />} />
+        <Route path="/SignUpPage" element={<SignUp />} />
+        <Route path="/Profile" element={<Profile />} />
+        <Route path="/RecipeInfo" element={<RecipeInfo />} />
+        {/* <Route path="teams" element={<Teams />}>
+          <Route path=":teamId" element={<Team />} />
+          <Route path="new" element={<NewTeamForm />} />
+          <Route index element={<LeagueStandings />} />
+        </Route> */}
+      {/* </Route> */}
+    </Routes>
+    <Footer/>
+  </BrowserRouter>,
+  // <React.StrictMode>
+  //   <App />
+  // </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

@@ -1,4 +1,5 @@
 //now we have to import each component individually
+import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -6,14 +7,17 @@ import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
+import Login from './Login.js';
+import { Link } from "react-router-dom"
 
 function Header() {
+  const [modalShow, setModalShow] = React.useState(false);
   return (
-    <div>
+    <div style={{bg:"dark" }}>
         {/* bg="dark" variant="dark"sticky="top" */}
-        <Navbar bg="light" expand="lg" sticky="top">
+        <Navbar style={{height:"100px"}} bg="light" expand="lg" sticky="top">
         <Container fluid>
-            <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+            <Link to="/"><img style={{height:"100%", width:"75px", borderRadius:"20px"}} src="./burp-icon.jpg" alt="logo"/></Link>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -21,15 +25,15 @@ function Header() {
                 style={{ maxHeight: '100px' }}
                 navbarScroll
             >
-                <Nav.Link href="#action1">Home</Nav.Link>
-                <Nav.Link href="#action2">Link</Nav.Link>
+                {/* <Nav.Link href="#action1">Home</Nav.Link>
+                <Nav.Link href="#action2">Link</Nav.Link> */}
                 {/* dropdown#1 */}
                 <NavDropdown title="Traditional" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action4">East</NavDropdown.Item>
-                <NavDropdown.Item href="#action3">North</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">North Eastern</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">West</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">South</NavDropdown.Item>
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">East</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">North</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">North Eastern</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">West</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">South</Link></NavDropdown.Item>
                 </NavDropdown>
                 {/* <NavDropdown.Divider /> */}
                 {/* <NavDropdown.Item href="#action5"> */}
@@ -38,52 +42,53 @@ function Header() {
                 
                 {/* dropdown#2 */}
                 <NavDropdown title="Cuisine" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">American</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">Chinese</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">French</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">Italian</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">Japanese</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">Korean</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">Mexican</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">Spanish</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">Thai</NavDropdown.Item>
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">American</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">Chinese</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">French</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">Italian</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">Japanese</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">Korean</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">Mexican</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">Spanish</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">Thai</Link></NavDropdown.Item>
                 </NavDropdown>
 
                 {/* dropdown#3 */}
 
                 <NavDropdown title="Course" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">BreakFast</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">Brunch</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">Brunch</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">Brunch</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
-                    Something else here
-                </NavDropdown.Item>
-                </NavDropdown>
-                {/* dropdown#4 */}
-                <NavDropdown title="Link" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
-                    Something else here
-                </NavDropdown.Item>
-                </NavDropdown>
-                {/* dropdown#5 */}
-                <NavDropdown title="Link" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
-                    Something else here
-                </NavDropdown.Item>
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">BreakFast</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">Brunch</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">Lunch</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">Snack</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">Dinner</Link></NavDropdown.Item>
                 </NavDropdown>
 
-                <Nav.Link href="#" disabled>
-                Link
-                </Nav.Link>
+                {/* dropdown#4 */}
+                <NavDropdown title="Mood" id="navbarScrollingDropdown">
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">Casual</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">Comfort</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">Happy</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">Family Friendly</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">Pocket Friendly</Link></NavDropdown.Item>
+                </NavDropdown>
+
+                {/* dropdown#5 */}
+                <NavDropdown title="Skill" id="navbarScrollingDropdown">
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">Easy</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">Medium</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">Hard</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">Kids</Link></NavDropdown.Item>
+                </NavDropdown>
+
+                {/* dropdown#6 */}
+                <NavDropdown title="Diet" id="navbarScrollingDropdown">
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">Low Fat</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">Low Calorie</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">Veg</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link style={{color:"black", textDecoration:"none"}} to="/">Vegan</Link></NavDropdown.Item>
+                </NavDropdown>
             </Nav>
+            
             <Form className="d-flex">
                 <FormControl
                 type="search"
@@ -94,14 +99,18 @@ function Header() {
                 <Button variant="outline-success">Search</Button>
             </Form>
             <div>
-            <Button style={{marginLeft:"25px", marginRight:"3px"}} variant="outline-success">Sign Up</Button>
-            <Button style={{margin:"3px"}} variant="outline-success">Login</Button>
+                {/* <Button style={{marginLeft:"25px", marginRight:"3px"}} variant="outline-success">Sign Up</Button> */}
+                <Button style={{marginLeft:"25px", marginRight:"3px"}} onClick={() => setModalShow(true)} variant="outline-success">Login</Button>
+                <Login
+                    show={modalShow}
+                    onHide={() => setModalShow(false)}
+                />
             </div>
 
             </Navbar.Collapse>
         </Container>
         </Navbar>
-        <Container fluid style={{background:"grey"}}>
+        {/* <Container fluid style={{background:"grey"}}>
             hello this is the container
             <div>
                 
@@ -111,7 +120,7 @@ function Header() {
             <div>
 
             </div>
-        </Container>
+        </Container> */}
 
     </div>
   );

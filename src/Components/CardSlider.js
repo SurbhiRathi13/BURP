@@ -6,15 +6,14 @@ function CardSlider() {
   return (
     <div >
       <Carousel>
-        <Carousel.Item style={{background:"silver" ,padding:"25px"}}>
+        <Carousel.Item style={{padding:"25px"}}>
           <CardGroup>
             <Card style={{padding:"15px"}}>
               <Card.Img variant="top" src="pic2.jpg" />
               <Card.Body>
                 <Card.Title>Card title</Card.Title>
                 <Card.Text>
-                  This is a wider card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.
+                  food
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
@@ -50,15 +49,14 @@ function CardSlider() {
             </Card>
           </CardGroup>
         </Carousel.Item>
-        <Carousel.Item style={{background:"silver" ,padding:"25px"}}>
+        <Carousel.Item style={{padding:"25px"}}>
           <CardGroup>
             <Card style={{padding:"15px"}}>
               <Card.Img variant="top" src="pic2.jpg" />
               <Card.Body>
                 <Card.Title>Card title</Card.Title>
                 <Card.Text>
-                  This is a wider card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.
+                  food
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
@@ -71,7 +69,7 @@ function CardSlider() {
                 <Card.Title>Card title</Card.Title>
                 <Card.Text>
                   This card has supporting text below as a natural lead-in to additional
-                  content.{' '}
+                  content.
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
@@ -94,15 +92,14 @@ function CardSlider() {
             </Card>
           </CardGroup>
         </Carousel.Item>
-        <Carousel.Item style={{background:"silver" ,padding:"25px"}}>
+        <Carousel.Item style={{padding:"25px"}}>
           <CardGroup>
             <Card style={{padding:"15px"}}>
               <Card.Img variant="top" src="pic2.jpg" />
               <Card.Body>
                 <Card.Title>Card title</Card.Title>
                 <Card.Text>
-                  This is a wider card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.
+                  food
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
