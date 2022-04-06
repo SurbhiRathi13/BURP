@@ -3,8 +3,6 @@ import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import FormControl from 'react-bootstrap/FormControl'
-import InputGroup from 'react-bootstrap/InputGroup'
 
 function AddRecipe() {
   return (
@@ -28,14 +26,6 @@ function AddRecipe() {
                 <Form.Label>Description</Form.Label>
                 <Form.Control placeholder="About the recipe"/>
             </Form.Group>
-
-            {/* <Form.Label htmlFor="basic-url">Image URL</Form.Label>
-            <InputGroup className="mb-3">
-                <InputGroup.Text id="basic-addon3">
-                    http://tinyurl.com/y43mkb4h
-                </InputGroup.Text>
-                <FormControl id="basic-url" aria-describedby="basic-addon3" />
-            </InputGroup> */}
 
             <Form.Group controlId="formFile" className="mb-3">
                 <Form.Label>Recipe Image</Form.Label>
@@ -75,8 +65,11 @@ function AddRecipe() {
             <Form.Group md={4} as={Col} controlId="formGridState">
                 <Form.Label>Mood</Form.Label>
                 <Form.Select defaultValue="Choose...">
-                    <option>Choose...</option>
-                    <option>...</option>
+                    <option>Casual</option>
+                    <option>Comfort</option>
+                    <option>Happy</option>
+                    <option>Family Friendly</option>
+                    <option>Pocket Friendly</option>
                 </Form.Select>
             </Form.Group>
 
@@ -84,7 +77,10 @@ function AddRecipe() {
                 <Form.Label>Diet</Form.Label>
                 <Form.Select defaultValue="Choose...">
                     <option>Choose...</option>
-                    <option>...</option>
+                    <option>Low Fat</option>
+                    <option>Low Calorie</option>
+                    <option>Veg</option>
+                    <option>Vegan</option>
                 </Form.Select>
             </Form.Group>
 
@@ -92,30 +88,42 @@ function AddRecipe() {
                 <Form.Label>Skills</Form.Label>
                 <Form.Select defaultValue="Choose...">
                     <option>Choose...</option>
-                    <option>...</option>
+                    <option>Easy</option>
+                    <option>Medium</option>
+                    <option>Hard</option>
+                    <option>Kids</option>
                 </Form.Select>
             </Form.Group>
             </Row>
             <hr></hr>
             <h2 class="heading2">Times</h2>
             <Row>
-                <Col md={4}>
+                <Col md={6}>
                     <Form.Label>No. of Servings</Form.Label>
                     <Form.Control placeholder="Serves" />
                 </Col>
-                <Col md={4}>
+                <Col md={6}>
                     <Form.Label>Cooking Time</Form.Label>
                     <Form.Control placeholder="Cook" />
                 </Col>
-                <Col md={4}>
-                    <Form.Label>Preparation Time</Form.Label>
-                    <Form.Control placeholder="Prep" />
-                </Col>
+                
             </Row>
+            
             <hr></hr>
             <h2 class="heading2">Instructions</h2>
+            <input type="text" className=""></input>
+                <Row id="survey_options">
+                    <input as="Col" type="text" name="survey_options[]" className="survey_options" size="50" />
+                    <input as="Col" type="text" name="survey_options[]" className="survey_options" size="50" />
+                    
+                </Row>
+                <Row class="controls">
+                    <a href="#" id="add_more_fields">Add Instruction</a>
+                    <a href="#" id="remove_fields">Remove Last</a>
+                </Row>
             <hr></hr>
             <h2 class="heading2">Ingredients</h2>
+            {/* <input type="text" className=""></input> */}
             <hr></hr>
             <h2 class="heading2">Nutrition</h2>
             <Row>
