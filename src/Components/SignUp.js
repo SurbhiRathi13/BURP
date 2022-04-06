@@ -1,3 +1,4 @@
+import './LoginPage.css';
 import Form from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
 import Row from "react-bootstrap/Row"
@@ -21,32 +22,15 @@ function SignUp() {
 
   return (
     <Container>
+      <div style={{alignItems:"center", marginTop:"30px"}} class="logo">
+        <img src="./burp-icon.jpg" 
+          alt="logo" 
+          style={{width:"130px", borderRadius:"5px"}}/>
+      </div>
       <Form style={{margin:"50px", padding:"15px"}} noValidate validated={validated} onSubmit={handleSubmit}>
         <h1 style={{textAlign:"center"}}> Welcome To BURP</h1>
         <hr></hr>
-        <Row className="mb-3">
-          <Form.Group as={Col} md="6" controlId="validationCustom01">
-            <Form.Label>First name</Form.Label>
-            <Form.Control
-              required
-              type="text"
-              placeholder="First name"
-              defaultValue=""
-            />
-            <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-          </Form.Group>
-          <Form.Group as={Col} md="6" controlId="validationCustom02">
-            <Form.Label>Last name</Form.Label>
-            <Form.Control
-              required
-              type="text"
-              placeholder="Last name"
-              defaultValue=""
-            />
-            <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-          </Form.Group>
-          
-        </Row>
+      
         <Form.Group controlId="validationCustomUsername">
             <Form.Label>Username</Form.Label>
             <InputGroup hasValidation>
@@ -61,6 +45,7 @@ function SignUp() {
               <Form.Control.Feedback type="invalid">
                 Please choose a username.
               </Form.Control.Feedback>
+              
             </InputGroup>
           </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -84,8 +69,7 @@ function SignUp() {
         <Row className="mb-3">
           <Form.Group as={Col} md="4" controlId="validationCustom03">
           <Form.Label>Gender</Form.Label>
-                <Form.Select defaultValue="Choose">
-                    <option>Choose</option>
+                <Form.Select defaultValue="Prefer not to say">
                     <option>Female</option>
                     <option>Male</option>
                     <option>Prefer not to say</option>
@@ -96,14 +80,14 @@ function SignUp() {
           </Form.Group>
           <Form.Group as={Col} md="4" controlId="validationCustom04">
             <Form.Label>Age</Form.Label>
-            <Form.Control type="text" placeholder="Age" required />
+            <Form.Control type="text" placeholder="Age"/>
             <Form.Control.Feedback type="invalid">
               Please provide a valid age.
             </Form.Control.Feedback>
           </Form.Group>
           <Form.Group as={Col} md="4" controlId="validationCustom05">
             <Form.Label>Occupation</Form.Label>
-            <Form.Control type="text" placeholder="Occupation" required />
+            <Form.Control type="text" placeholder="Occupation"/>
             <Form.Control.Feedback type="invalid">
               Please provide a valid occupation.
             </Form.Control.Feedback>

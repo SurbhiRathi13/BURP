@@ -7,17 +7,26 @@ import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
-import Login from './Login.js';
 import { Link } from "react-router-dom"
+// import { BsSearch } from "react-icons/bs";
 
 function Header() {
-  const [modalShow, setModalShow] = React.useState(false);
+
   return (
-    <div style={{bg:"dark" }}>
+    <div>
         {/* bg="dark" variant="dark"sticky="top" */}
-        <Navbar style={{height:"100px"}} bg="light" expand="lg" sticky="top">
+        <Navbar bg="light" expand="lg" sticky="top">
         <Container fluid>
-            <Link to="/"><img style={{height:"100%", width:"75px", borderRadius:"20px"}} src="./burp-icon.jpg" alt="logo"/></Link>
+            <Link to="/">
+                <img
+                    src="./burp-icon.jpg"
+                    width="50"
+                    height="50"
+                    className="d-inline-block align-top"
+                    alt="logo"
+                />
+            </Link>
+            {/* <Link to="/"><img style={{height:"100%", width:"75px", borderRadius:"20px"}} src="./burp-icon.jpg" alt="logo"/></Link> */}
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -100,11 +109,7 @@ function Header() {
             </Form>
             <div>
                 {/* <Button style={{marginLeft:"25px", marginRight:"3px"}} variant="outline-success">Sign Up</Button> */}
-                <Button style={{marginLeft:"25px", marginRight:"3px"}} onClick={() => setModalShow(true)} variant="outline-success">Login</Button>
-                <Login
-                    show={modalShow}
-                    onHide={() => setModalShow(false)}
-                />
+                <Link to="/LoginPage"><Button style={{marginLeft:"25px", marginRight:"3px"}} variant="outline-success">Login</Button></Link>
             </div>
 
             </Navbar.Collapse>

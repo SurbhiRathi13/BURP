@@ -19,7 +19,7 @@ function Add() {
                 overlay={renderTooltip}
             >
                 <Link to="/addRecipePage">
-                <button className="addButton"><BsPlusCircleFill size="3x" /></button>
+                <span className="addButton"><BsPlusCircleFill size="3x" /></span>
                 </Link>
             </OverlayTrigger>
       </div>

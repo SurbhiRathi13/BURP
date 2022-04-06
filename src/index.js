@@ -10,6 +10,7 @@ import Footer from "./Components/Footer.js"
 import SignUp from "./Components/SignUp.js"
 import Profile from "./Components/Profile"
 import RecipeInfo from "./Components/RecipeInfo"
+import LoginPage from "./Components/LoginPage"
 import {
   BrowserRouter,
   Routes,
@@ -24,6 +25,7 @@ ReactDOM.render(
       <Route path="/" element={<App />}/>
         <Route path="/addRecipePage" element={<AddRecipe />} />
         <Route path="/SignUpPage" element={<SignUp />} />
+        <Route path="/LoginPage" element={<LoginPage />} />
         <Route path="/Profile" element={<Profile />} />
         <Route path="/RecipeInfo" element={<RecipeInfo />} />
         {/* <Route path="teams" element={<Teams />}>

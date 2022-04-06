@@ -12,10 +12,10 @@ function Profile(props) {
           <hr></hr>
           <Row>
             <Col xs="5">
-                <Card  style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src="bfg.jpg" alt="userImage"/>
+                <Card  style={{ width: '18rem',borderRadius:"9rem" }}>
+                    <Card.Img style={{borderRadius:"9rem"}} variant="top" src="bfg.jpg" alt="userImage"/>
                     <Card.Body>
-                        <Card.Title>{props.Username}</Card.Title>
+                        <Card.Title>Username</Card.Title>
                         {/* <Card.Text>
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.

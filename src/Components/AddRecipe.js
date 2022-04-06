@@ -24,18 +24,18 @@ function AddRecipe() {
                 </Form.Group>
             </Row>
 
-            <Form.Group className="mb-3" controlId="formGridAddress1">
+            <Form.Group className="mb-3" controlId="formGridText">
                 <Form.Label>Description</Form.Label>
                 <Form.Control placeholder="About the recipe"/>
             </Form.Group>
 
-            <Form.Label htmlFor="basic-url">Image URL</Form.Label>
+            {/* <Form.Label htmlFor="basic-url">Image URL</Form.Label>
             <InputGroup className="mb-3">
                 <InputGroup.Text id="basic-addon3">
                     http://tinyurl.com/y43mkb4h
                 </InputGroup.Text>
                 <FormControl id="basic-url" aria-describedby="basic-addon3" />
-            </InputGroup>
+            </InputGroup> */}
 
             <Form.Group controlId="formFile" className="mb-3">
                 <Form.Label>Recipe Image</Form.Label>
@@ -145,7 +145,6 @@ function AddRecipe() {
                 </Col>
             </Row>
             <hr></hr>
-            <h2 class="heading2">Save/Delete</h2>
             <Button style={{margin:"10px"}} variant="success" type="submit">
                 Save
             </Button>
