@@ -5,7 +5,8 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 import AddRecipe from './Components/AddRecipe.js'
-import Header from "./Components/Header.js"
+// import Header from "./Components/Header.js"
+// import HeaderLoggedIn from "./Components/HeaderLoggedIn.js"
 import Footer from "./Components/Footer.js"
 import SignUp from "./Components/SignUp.js"
 import Profile from "./Components/Profile"
@@ -20,14 +21,15 @@ import {
 
 ReactDOM.render(
   <BrowserRouter>
-    <Header/>
+    {/* <Header/> */}
+    {/* <HeaderLoggedIn/> */}
     <Routes>
-      <Route path="/" element={<App />}/>
-        <Route path="/addRecipePage" element={<AddRecipe />} />
-        <Route path="/SignUpPage" element={<SignUp />} />
-        <Route path="/LoginPage" element={<LoginPage />} />
-        <Route path="/Profile" element={<Profile />} />
-        <Route path="/RecipeInfo" element={<RecipeInfo />} />
+      <Route exact path="/" element={<App />}/>
+        <Route exact path="/addRecipePage" element={<AddRecipe />} />
+        <Route exact path="/SignUpPage" element={<SignUp />} />
+        <Route exact path="/LoginPage" element={<LoginPage />} />
+        <Route exact path="/Profile" element={<Profile />} />
+        <Route exact path="/RecipeInfo" element={<RecipeInfo />} />
         {/* <Route path="teams" element={<Teams />}>
           <Route path=":teamId" element={<Team />} />
           <Route path="new" element={<NewTeamForm />} />
@@ -35,7 +37,7 @@ ReactDOM.render(
         </Route> */}
       {/* </Route> */}
     </Routes>
-    <Footer/>
+      <Footer/>
   </BrowserRouter>,
   // <React.StrictMode>
   //   <App />

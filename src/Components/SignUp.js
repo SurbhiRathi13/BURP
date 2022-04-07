@@ -6,6 +6,7 @@ import Col from "react-bootstrap/Col"
 import Container from "react-bootstrap/Container"
 import InputGroup from "react-bootstrap/InputGroup"
 import React from "react"
+import Header from "./Header.js"
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 
@@ -61,16 +62,17 @@ function SignUp() {
     }
   }
   return (
-
-    <Container>
+    <div>
+      <Header/>
+      <Container>
       <div style={{alignItems:"center", marginTop:"30px"}} class="logo">
         <img src="./burp-icon.jpg" 
           alt="logo" 
           style={{width:"130px", borderRadius:"5px"}}/>
       </div>
       <Form method="POST" style={{margin:"50px", padding:"15px"}}
-       noValidate validated={validated} 
-       onSubmit={handleSubmit}>
+      noValidate validated={validated} 
+      onSubmit={handleSubmit}>
         <h1 style={{textAlign:"center"}}> Welcome To BURP</h1>
         <hr></hr>
       
@@ -122,7 +124,7 @@ function SignUp() {
               </Form.Control.Feedback>
               <Form.Label> Re-EnterPassword</Form.Label>
             <Form.Control 
-            value={user.password}
+            value={user.cpassword}
             onChange={handleInputs}
             name="cpassword"
             type="password" 
@@ -177,8 +179,9 @@ function SignUp() {
         
         <Button onClick={PostData} type="submit">Submit form</Button>
       </Form>
-    </Container>
-    
+      </Container>
+    </div>
+
   );
 }
 

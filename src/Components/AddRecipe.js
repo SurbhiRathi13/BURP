@@ -3,10 +3,31 @@ import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import HeaderLoggedIn from "./HeaderLoggedIn.js"
 
 function AddRecipe() {
+    var survey_options = document.getElementById('survey_options1');
+// var add_more_fields = document.getElementById('add_more_fields');
+// var remove_fields = document.getElementById('remove_fields');
+
+let AddFields= function(){
+    var newField = document.createElement('input');
+    newField.setAttribute('type','text');
+    // newField.setAttribute('name','instruction');
+    newField.setAttribute('className','instructions');
+    newField.setAttribute('size','70');
+    survey_options.appendChild(newField);
+}
+
+let removeFields= function(){
+    var input_tags = survey_options.getElementsByTagName('input');
+    if(input_tags.length > 2) {
+        survey_options.removeChild(input_tags[(input_tags.length)-1])
+    }
+}
   return (
     <div>
+        <HeaderLoggedIn/>
         <Form style={{padding:"50px"}}>
             <h1 style={{ marginBottom:"20px"}}>New Recipe</h1>
             <h2 class="heading2">Details</h2>
@@ -39,15 +60,27 @@ function AddRecipe() {
                 <Form.Label>Traditional</Form.Label>
                 <Form.Select defaultValue="Choose...">
                     <option>Choose...</option>
-                    <option>...</option>
+                    <option>East</option>
+                    <option>North</option>
+                    <option>North Eastern</option>
+                    <option>West</option>
+                    <option>South</option>
                 </Form.Select>
                 </Form.Group>
-                
+
                 <Form.Group md={4} as={Col} controlId="formGridState">
                     <Form.Label>Cuisine</Form.Label>
                     <Form.Select defaultValue="Choose...">
                         <option>Choose...</option>
-                        <option>...</option>
+                        <option>American</option>
+                        <option>Chinese</option>
+                        <option>French</option>
+                        <option>Italian</option>
+                        <option>Japanese</option>
+                        <option>Korean</option>
+                        <option>Mexican</option>
+                        <option>Spanish</option>
+                        <option>Thai</option>
                     </Form.Select>
                 </Form.Group>
 
@@ -55,7 +88,11 @@ function AddRecipe() {
                     <Form.Label>Course</Form.Label>
                     <Form.Select defaultValue="Choose...">
                         <option>Choose...</option>
-                        <option>...</option>
+                        <option>BreakFast</option>
+                        <option>Brunch</option>
+                        <option>Lunch</option>
+                        <option>Snack</option>
+                        <option>Dinner</option>
                     </Form.Select>
                 </Form.Group>
             
@@ -106,24 +143,36 @@ function AddRecipe() {
                     <Form.Label>Cooking Time</Form.Label>
                     <Form.Control placeholder="Cook" />
                 </Col>
-                
             </Row>
             
             <hr></hr>
             <h2 class="heading2">Instructions</h2>
-            <input type="text" className=""></input>
-                <Row id="survey_options">
-                    <input as="Col" type="text" name="survey_options[]" className="survey_options" size="50" />
-                    <input as="Col" type="text" name="survey_options[]" className="survey_options" size="50" />
+                <div id="survey_options1">
+                    <input type="text" className="instructions" size="70"/>
+                    <input type="text" className="instructions" size="70"/>
                     
-                </Row>
-                <Row class="controls">
-                    <a href="#" id="add_more_fields">Add Instruction</a>
-                    <a href="#" id="remove_fields">Remove Last</a>
-                </Row>
+                </div>
+                <div class="controls">
+                    <Button style={{margin:"10px"}} id="add_more_fields" variant="success" onClick={AddFields}>Add Instruction</Button>
+                    <Button style={{margin:"10px"}} id="remove_fields" variant="success" onClick={removeFields}>Remove Last</Button>
+                    {/* <a href="#" id="add_more_fields">Add Instruction</a>
+                    <a href="#" id="remove_fields">Remove Last</a> */}
+                </div>
             <hr></hr>
             <h2 class="heading2">Ingredients</h2>
             {/* <input type="text" className=""></input> */}
+                <div id="survey_options2">
+                    <input type="text" className="ingredients" size="30"/>
+                    <input type="text" className="ingredients" size="30"/>
+                    <input type="text" className="ingredients" size="30"/>
+                    <input type="text" className="ingredients" size="30"/>
+                </div>
+                <div class="controls">
+                    <Button style={{margin:"10px"}} id="add_more_fields" variant="success" onClick={AddFields}>Add Ingredients</Button>
+                    <Button style={{margin:"10px"}} id="remove_fields" variant="success" onClick={removeFields}>Remove Last</Button>
+                    {/* <a href="#" id="add_more_fields">Add Instruction</a>
+                    <a href="#" id="remove_fields">Remove Last</a> */}
+                </div> 
             <hr></hr>
             <h2 class="heading2">Nutrition</h2>
             <Row>
@@ -136,7 +185,7 @@ function AddRecipe() {
                     <Form.Control placeholder="0"/>
                 </Col>
                 <Col md={2}>
-                    <Form.Label>Saturates</Form.Label>
+                    <Form.Label>Protein</Form.Label>
                     <Form.Control placeholder="0"/>
                 </Col>
                 <Col md={2}>

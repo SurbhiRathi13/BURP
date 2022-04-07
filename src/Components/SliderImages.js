@@ -6,41 +6,38 @@ function SliderImages() {
     <div>
       <Carousel variant="dark">
   <Carousel.Item interval={1500} style={{height:"300px", position:"relative" , align:"center"  }} >
-    <Card className="bg-dark text-white">
-      <Card.Img style={{position:"absolute" , top:"-80%"}} src="pic2.jpg" alt="Card image" />
+    <Card style={{ width:"190", height:"200"}} className="bg-dark text-white">
+      <Card.Img style={{position:"absolute" ,objectFit:"cover" }} src="momos.jpg" alt="Card image" />
       <Card.ImgOverlay>
-        <Card.Title>Card title</Card.Title>
+        <Card.Title>Momos</Card.Title>
           <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in to
-            additional content. This content is a little bit longer.
+          Momos are a popular street food in northern parts of India. These are also known as Dim Sum and are basically dumplings made from flour with a savory stuffing.
           </Card.Text>
-        <Card.Text>Last updated 3 mins ago</Card.Text>
+        {/* <Card.Text>Last updated 3 mins ago</Card.Text> */}
       </Card.ImgOverlay>
     </Card>
   </Carousel.Item>
   <Carousel.Item interval={1500} style={{height:"300px", position:"relative" , align:"center"  }}>
   <Card className="bg-dark text-white">
-      <Card.Img style={{position:"absolute" , top:"-80%"}}  src="pic2.jpg" alt="Card image" />
+      <Card.Img style={{position:"absolute" , top:"-80%"}}  src="idli.jpg" alt="Card image" />
       <Card.ImgOverlay>
-        <Card.Title>Card title</Card.Title>
+        <Card.Title>Idli-Sambar</Card.Title>
           <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in to
-            additional content. This content is a little bit longer.
+          Idli Sambar is a South Indian breakfast meal where soft fluffy steamed cakes known as idli are served with sambar, a vegetable lentil stew.
           </Card.Text>
-        <Card.Text>Last updated 3 mins ago</Card.Text>
+        {/* <Card.Text>Last updated 3 mins ago</Card.Text> */}
       </Card.ImgOverlay>
     </Card>
   </Carousel.Item>
   <Carousel.Item interval={1500} style={{height:"300px", position:"relative" , align:"center"  }}>
   <Card className="bg-dark text-white">
-      <Card.Img style={{position:"absolute" , top:"-80%"}} src="pic2.jpg" alt="Card image" />
+      <Card.Img style={{position:"absolute" , top:"-80%"}} src="gulab-jamun.jpg" alt="Card image" />
       <Card.ImgOverlay>
-        <Card.Title>Card title</Card.Title>
+        <Card.Title>Gulab-Jamun</Card.Title>
           <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in to
-            additional content. This content is a little bit longer.
+          Gulab jamun is an Indian dessert of fried berry-sized dough balls that are soaked in a sweet, sticky sugar syrup. 
           </Card.Text>
-        <Card.Text>Last updated 3 mins ago</Card.Text>
+        {/* <Card.Text>Last updated 3 mins ago</Card.Text> */}
       </Card.ImgOverlay>
     </Card>
   </Carousel.Item>

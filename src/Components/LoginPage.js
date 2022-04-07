@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import Container from 'react-bootstrap/Container'
 import { Link } from 'react-router-dom'
+import Header from "./Header.js"
 
 // import { BsInstagram} from "react-icons/fa";
 const LoginPage = () => {
@@ -21,7 +22,9 @@ const LoginPage = () => {
 
   
   return (
-    <Container>
+    <div>
+      <Header/>
+      <Container>
       <div style={{alignItems:"center"}} class="logo">
         <img src="./burp-icon.jpg" 
           alt="logo" 
@@ -58,7 +61,10 @@ const LoginPage = () => {
         </Form>
       </div>
         
-    </Container>
+      </Container>
+    </div>
+
+    
     
   );
 }
